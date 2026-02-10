@@ -1,0 +1,145 @@
+* {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  color: #d296de;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0a071e;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #a703b348;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.title {
+  background: linear-gradient(90deg, #9a06a5, #eabed4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #9a06a5;
+  font-weight: bold;
+  display: inline-block;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d296de;
+  transform: scale(1.1);
+}
+
+.hamburger {
+  font-size: 26px;
+  color: #d296de;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(212, 175, 223, 0.96);
+    width: 200px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+.card {
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 60px;
+  border-radius: 12px;
+  border: 2px solid #a826ad;
+  box-shadow: 0 4px 15px rgba(135, 33, 149, 0.44);
+  line-height: 1.6;
+}
+h1 {
+  color: #a826ad;
+}
+h2 {
+  color: #a826ad;
+}
+.dev-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 0px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.grid-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin: 0;
+}
